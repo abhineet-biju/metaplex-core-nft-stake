@@ -23,4 +23,12 @@ pub mod metaplex {
         ctx.accounts
             .handler(rewards_per_second, burn_bonus, &ctx.bumps)
     }
+
+    pub fn stake(ctx: Context<Stake>) -> Result<()> {
+        ctx.accounts.handler(&ctx.bumps)
+    }
+
+    pub fn unstake(ctx: Context<Unstake>) -> Result<()> {
+        ctx.accounts.handler()
+    }
 }
