@@ -1,0 +1,26 @@
+pub mod constants;
+pub mod error;
+pub mod instructions;
+pub mod plugins;
+pub mod state;
+
+use anchor_lang::prelude::*;
+pub use constants::*;
+pub use instructions::*;
+pub use state::*;
+
+declare_id!("9Z9c67r7RFUADpWTTJxgbidobiNnHTtzLodTa6JQSBaX");
+
+#[program]
+pub mod metaplex {
+    use super::*;
+
+    pub fn initialize(
+        ctx: Context<Initialize>,
+        rewards_per_second: u64,
+        burn_bonus: u64,
+    ) -> Result<()> {
+        ctx.accounts
+            .handler(rewards_per_second, burn_bonus, &ctx.bumps)
+    }
+}
