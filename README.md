@@ -39,3 +39,7 @@ Rebuild after code changes. LiteSVM tests need no deployment or validator. Core 
 ## Tests
 
 All 10 integration tests and the program ID test pass. Tests cover the five instructions, reward accounting, permissions, collection attributes, and rollback.
+
+![Passing program ID, burn, reward claim, and initialization tests](docs/tests-passing-1.png)
+
+![Passing staking and unstaking tests](docs/tests-passing-2.png)
