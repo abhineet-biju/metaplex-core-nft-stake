@@ -28,6 +28,10 @@ pub mod metaplex {
         ctx.accounts.handler(&ctx.bumps)
     }
 
+    pub fn claim_rewards(ctx: Context<ClaimRewards>) -> Result<()> {
+        ctx.accounts.handler()
+    }
+
     pub fn unstake(ctx: Context<Unstake>) -> Result<()> {
         ctx.accounts.handler()
     }
