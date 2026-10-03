@@ -35,4 +35,8 @@ pub mod metaplex {
     pub fn unstake(ctx: Context<Unstake>) -> Result<()> {
         ctx.accounts.handler()
     }
+
+    pub fn burn_staked_nft(ctx: Context<BurnStakedNft>) -> Result<()> {
+        ctx.accounts.handler()
+    }
 }
